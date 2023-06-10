@@ -3,34 +3,29 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-bx0/21xDO2PL6tSaTyhYvhsFySoApIQzAa1IWfu/EJ4=' 'sha256-c7uWV2oqCmvn9QFtXjEMzpE3PK0rR7euLinMD44itII='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#000000" />
         <meta name="Jolene Langlinais" content="Personal Website" />
-        <meta
-            name="description"
-            content="Jolene Langlinais's personal website with links to resources including code, blogs, talks, and contact."
-        />
-        <!-- <link rel="manifest" href="manifest.json" /> -->
+        <meta name="description" content="Jolene Langlinais's personal website with links to resources including code, blogs, talks, and contact." />
         <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="light.css" id="theme" />
-        <link rel="preload" as="font">
+        <link rel="stylesheet" href="styles/main.light.css" id="theme" />
         <title>Jolene Langlinais</title>
         <script defer>
             function switchLightOrDark() {
                 let theme = document.getElementById("theme");
                 let el = document.getElementById("lightOrDarkButton");
                 let sigImg = document.getElementById("sig");
-                if (theme.getAttribute("href") == "light.css") {
-                    theme.href = "dark.css";
+                if (theme.getAttribute("href") == "styles/main.light.css") {
+                    theme.href = "styles/main.dark.css";
                     el.firstChild.data = "☀️";
-                    sigImg.src = "signatureLight.png";
+                    sigImg.src = "assets/signatureLight.webp";
                     sigImg.style.width = "400px";
                     sigImg.style.maxWidth = "70%";
                 } else {
-                    theme.href = "light.css";
+                    theme.href = "styles/main.light.css";
                     el.firstChild.data = "🌙";
-                    sigImg.src = "signatureDark.png";
+                    sigImg.src = "assets/signatureDark.webp";
                     sigImg.style.width = "400px";
                     sigImg.style.maxWidth = "70%";
                 };
@@ -48,19 +43,21 @@
             }
             window.onload = CheckMobile;
         </script>
-        <script defer src="https://kit.fontawesome.com/860fc47340.js"></script>
+        <link href="styles/fa.fontawesome.css" rel="stylesheet">
+        <link href="styles/fa.brands.css" rel="stylesheet">
+        <link href="styles/fa.solid.css" rel="stylesheet">
     </head>
     <body id="bodyId">
             <div id="page">
                 <div id="main">
                     <div>
                         <a href="https://jolenelanglinais.com">
-                            <img src="./logo.png" id="headshot" alt="Headshot Image" />
+                            <img src="./assets/logo.webp" id="headshot" alt="Headshot Image" />
                         </a>
                     </div>
                     <div>
                         <a href="https://jolenelanglinais.com">
-                            <img id="sig" src="signatureDark.png" alt="Jolene Langlinais Signature" />
+                            <img id="sig" src="assets/signatureDark.webp" alt="Jolene Langlinais Signature" />
                         </a>
                     </div>
                     <div>
@@ -86,19 +83,19 @@
                 </div>
                 <div id="socialLink">
                     <a href="https://twitter.com/jolanglinais" rel="noopener" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fa-brands fa-twitter"></i>
                     </a>
                     <a href="https://dev.to/irmerk" rel="noopener" target="_blank" aria-label="DEV Community">
-                        <i class="fab fa-dev"></i>
+                        <i class="fa-brands fa-dev"></i>
                     </a>
                     <a href="mailto:jolenelanglinais@gmail.com?subject=Greetings, Earthling" rel="noopener" target="_blank" aria-label="Email"> 
-                        <i class="fas fa-envelope-square"></i>
+                        <i class="fa-solid fa-envelope-square"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/jolene-langlinais/" rel="noopener" target="_blank" aria-label="LinkedIn"> 
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                     <a href="https://github.com/irmerk" rel="noopener" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
+                        <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
                 <button onclick="switchLightOrDark()" id="lightOrDarkButton">🌙</button>
