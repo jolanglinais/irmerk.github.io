@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="Jolene Langlinais" content="Personal Website" />
+        <meta
+            name="description"
+            content="Jolene Langlinais's personal website with links to resources including code, blogs, talks, and contact."
+        />
+        <!-- <link rel="manifest" href="manifest.json" /> -->
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="light.css" id="theme" />
+        <title>Jolene Langlinais</title>
+        <script src="https://kit.fontawesome.com/860fc47340.js"></script>
+        <script>
+            function switchLightOrDark() {
+                let theme = document.getElementById("theme");
+                let el = document.getElementById("lightOrDarkButton");
+                let sigImg = document.getElementById("sig");
+                if (theme.getAttribute("href") == "light.css") {
+                    theme.href = "dark.css";
+                    el.firstChild.data = "☀️";
+                    sigImg.src = "signatureLight.png";
+                    sigImg.style.width = "400px";
+                    sigImg.style.maxWidth = "70%";
+                } else {
+                    theme.href = "light.css";
+                    el.firstChild.data = "🌙";
+                    sigImg.src = "signatureDark.png";
+                    sigImg.style.width = "400px";
+                    sigImg.style.maxWidth = "70%";
+                };
+            }
+        </script>
+        <script type="text/javascript">
+            function CheckMobile() {
+                if (
+                    ["iPad", "iPhone", "iPod"].includes(navigator.platform) ||
+                    /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                ) {
+                    document.getElementById("sig").style.width = "50% !important";
+                    document.getElementById("sig").style.maxWidth = "70% !important";
+                };
+            }
+            window.onload = CheckMobile;
+        </script>
+    </head>
+    <body id="bodyId">
+            <div id="page">
+                <div id="main">
+                    <div>
+                        <a href="https://jolenelanglinais.com">
+                            <img src="./logo.png" id="headshot" alt="Headshot Image" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://jolenelanglinais.com">
+                            <img id="sig" src="signatureDark.png" alt="Jolene Langlinais Signature" />
+                        </a>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="text">Full</span>
+                            <span class="text">stack</span>
+                            <span class="text">software</span>
+                            <span class="text">engineer</span>
+                            <span class="text">designing</span>
+                            <span class="text">sophisticated</span>
+                            <span class="text">systems</span>
+                            <span class="text">with</span>
+                            <span class="text">code</span>
+                        </p>
+                        <p>
+                            <span class="text">Project</span>
+                            <span class="text">manager</span>
+                            <span class="text">driving</span>
+                            <span class="text">organized</span>
+                            <span class="text">programs</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="socialLink">
+                    <a href="https://twitter.com/jolanglinais" rel="noopener" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://dev.to/irmerk" rel="noopener" target="_blank" aria-label="DEV Community">
+                        <i class="fab fa-dev"></i>
+                    </a>
+                    <a href="mailto:jolenelanglinais@gmail.com?subject=Greetings, Earthling" rel="noopener" target="_blank" aria-label="Email"> 
+                        <i class="fas fa-envelope-square"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jolene-langlinais/" rel="noopener" target="_blank" aria-label="LinkedIn"> 
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/irmerk" rel="noopener" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <button onclick="switchLightOrDark()" id="lightOrDarkButton">🌙</button>
+            </div>
+    </body>
+</html>
