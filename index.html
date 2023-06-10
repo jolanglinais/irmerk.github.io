@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#000000" />
         <meta name="Jolene Langlinais" content="Personal Website" />
@@ -13,9 +14,9 @@
         <!-- <link rel="manifest" href="manifest.json" /> -->
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="light.css" id="theme" />
+        <link rel="preload" as="font">
         <title>Jolene Langlinais</title>
-        <script src="https://kit.fontawesome.com/860fc47340.js"></script>
-        <script>
+        <script defer>
             function switchLightOrDark() {
                 let theme = document.getElementById("theme");
                 let el = document.getElementById("lightOrDarkButton");
@@ -47,6 +48,7 @@
             }
             window.onload = CheckMobile;
         </script>
+        <script defer src="https://kit.fontawesome.com/860fc47340.js"></script>
     </head>
     <body id="bodyId">
             <div id="page">
