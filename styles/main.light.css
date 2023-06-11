@@ -31,20 +31,6 @@ i {
   transition: 0.5s;
 }
 
-/* text hover transition activity */
-.text {
-  /*for fade effect on hover*/
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.text:hover {
-  color: #576ce0;
-}
-
 /* Specify links */
 a:link {
   font-size: 1.5rem;
@@ -145,6 +131,18 @@ i {
   outline: none;
   border-color: #576ce0;
   box-shadow: 0 0 10px #576ce0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* arabic */
