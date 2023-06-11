@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-bx0/21xDO2PL6tSaTyhYvhsFySoApIQzAa1IWfu/EJ4=' 'sha256-c7uWV2oqCmvn9QFtXjEMzpE3PK0rR7euLinMD44itII='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-c7uWV2oqCmvn9QFtXjEMzpE3PK0rR7euLinMD44itII='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#000000" />
         <meta name="Jolene Langlinais" content="Personal Website" />
@@ -11,26 +11,7 @@
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="styles/main.light.css" id="theme" />
         <title>Jolene Langlinais</title>
-        <script defer>
-            function switchLightOrDark() {
-                let theme = document.getElementById("theme");
-                let el = document.getElementById("lightOrDarkButton");
-                let sigImg = document.getElementById("sig");
-                if (theme.getAttribute("href") == "styles/main.light.css") {
-                    theme.href = "styles/main.dark.css";
-                    el.firstChild.data = "☀️";
-                    sigImg.src = "assets/signatureLight.webp";
-                    sigImg.style.width = "400px";
-                    sigImg.style.maxWidth = "70%";
-                } else {
-                    theme.href = "styles/main.light.css";
-                    el.firstChild.data = "🌙";
-                    sigImg.src = "assets/signatureDark.webp";
-                    sigImg.style.width = "400px";
-                    sigImg.style.maxWidth = "70%";
-                };
-            }
-        </script>
+        <script defer src="script.js"></script>
         <script type="text/javascript">
             function CheckMobile() {
                 if (
@@ -98,7 +79,7 @@
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
-                <button onclick="switchLightOrDark()" id="lightOrDarkButton">🌙</button>
+                <button id="lightOrDarkButton">🌙</button>
             </div>
     </body>
 </html>
