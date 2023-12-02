@@ -77,6 +77,20 @@ i {
   max-width: 70%;
 }
 
+.emphasis {
+  /*for fade effect on hover*/
+  -o-transition:color 0.5s;
+  -ms-transition:color 0.5s;
+  -moz-transition:color 0.5s;
+  -webkit-transition:color 0.5s;
+  transition:color 0.5s;
+}
+
+.emphasis:hover {
+  color: #FF7518;
+  transition: 0.15s;
+}
+
 /* Links within general text */
 .headerLink {
   font-size: 1.2rem !important;
@@ -99,10 +113,7 @@ i {
 .fa-linkedin-in:hover {
   color: #0976b4;
 }
-.fa-twitter:hover {
-  color: #55acee;
-}
-.fa-envelope-square:hover {
+.fa-paper-plane:hover {
   color: #d44638;
 }
 .fa-dev:hover {
