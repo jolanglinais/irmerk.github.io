@@ -88,9 +88,26 @@ i {
 }
 
 #notion:hover {
-  fill: #000000;
+  fill: #ffffff;
 
   transition: 0.15s;
+}
+
+#substack {
+  fill: #cfcfcf;
+
+  /*for fade effect on hover*/
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#substack:hover {
+  fill: #ed7135;
+
+  transition: 0.25s;
 }
 
 #page {
@@ -132,7 +149,7 @@ i {
 /* Social link icon wrapper */
 #socialLink {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   width: min-content;
   margin: 0.5em auto;
 }
@@ -159,7 +176,13 @@ i {
   color: #00ab6c;
 }
 .fa-mastodon:hover {
-  color: #6364FF
+  color: #6364FF;
+}
+.fa-mug-hot:hover {
+  color: #ec6632;
+}
+.fa-linktree:hover {
+  color: #78e371;
 }
 
 #lightOrDarkButton {
