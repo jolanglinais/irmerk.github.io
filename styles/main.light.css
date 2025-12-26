@@ -147,10 +147,15 @@ i {
 
 /* Social link icon wrapper */
 #socialLink {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  width: min-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 280px; /* adjust to fit 5 items per row */
   margin: 0.5em auto;
+}
+
+#socialLink > *:last-child:nth-child(5n + 1) {
+  grid-column: 3;
 }
 
 /* All child social links */
@@ -182,6 +187,9 @@ i {
 }
 .fa-linktree:hover {
   color: #78e371;
+}
+.fa-book:hover {
+  color: #ffb559;
 }
 
 #lightOrDarkButton {
