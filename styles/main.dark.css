@@ -59,23 +59,6 @@ i {
   padding: 5px;
 }
 
-#bluesky {
-  fill: #cfcfcf;
-
-  /*for fade effect on hover*/
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#bluesky:hover {
-  fill: #1185FE;
-
-  transition: 0.15s;
-}
-
 #notion {
   fill: #cfcfcf;
 
@@ -91,23 +74,6 @@ i {
   fill: #ffffff;
 
   transition: 0.15s;
-}
-
-#substack {
-  fill: #cfcfcf;
-
-  /*for fade effect on hover*/
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#substack:hover {
-  fill: #ed7135;
-
-  transition: 0.25s;
 }
 
 #page {
@@ -141,11 +107,6 @@ i {
   transition: 0.15s;
 }
 
-/* Links within general text */
-.headerLink {
-  font-size: 1.2rem !important;
-}
-
 /* Social link icon wrapper */
 #socialLink {
   display: flex;
@@ -155,42 +116,23 @@ i {
   margin: 0.5em auto;
 }
 
-#socialLink > *:last-child:nth-child(5n + 1) {
-  grid-column: 3;
-}
-
 /* All child social links */
 #socialLink > * {
   margin: 8px;
 }
 
 /* Specify social icon hover color */
-.fa-linkedin-in:hover {
-  color: #0976b4;
-}
 .fa-paper-plane:hover {
   color: #d44638;
-}
-.fa-dev:hover {
-  color: #7a52ff;
-}
-.fa-github:hover {
-  color: #ad5c51;
-}
-.fa-file-alt:hover {
-  color: #00ab6c;
-}
-.fa-mastodon:hover {
-  color: #6364FF;
-}
-.fa-mug-hot:hover {
-  color: #ec6632;
 }
 .fa-linktree:hover {
   color: #78e371;
 }
 .fa-book:hover {
   color: #ffb559;
+}
+.fa-book-bookmark:hover {
+  color: #6466e9;
 }
 
 #lightOrDarkButton {
