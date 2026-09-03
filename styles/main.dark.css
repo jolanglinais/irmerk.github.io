@@ -59,23 +59,6 @@ i {
   padding: 5px;
 }
 
-#notion {
-  fill: #cfcfcf;
-
-  /*for fade effect on hover*/
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#notion:hover {
-  fill: #ffffff;
-
-  transition: 0.15s;
-}
-
 #page {
   margin-top: 50px;
   display: grid;
@@ -121,18 +104,21 @@ i {
   margin: 8px;
 }
 
-/* Specify social icon hover color */
+/* Specify social icon hover color, in link order */
 .fa-paper-plane:hover {
   color: #d44638;
+}
+.fa-book-bookmark:hover {
+  color: #6466e9;
 }
 .fa-linktree:hover {
   color: #78e371;
 }
+.fa-notion:hover {
+  color: #ffffff;
+}
 .fa-book:hover {
   color: #ffb559;
-}
-.fa-book-bookmark:hover {
-  color: #6466e9;
 }
 
 #lightOrDarkButton {
