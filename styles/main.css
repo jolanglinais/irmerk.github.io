@@ -58,6 +58,14 @@ a:active {
   color: var(--accent-active);
 }
 
+/* Keyboard focus. Same ring as the toggle button so both read as one system. */
+a:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 2px;
+  border-radius: 2px;
+  color: var(--accent-hover);
+}
+
 /* Spacing around social icons; em so it tracks the icon's own size */
 i {
   padding: 0.25em;
