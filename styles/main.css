@@ -1,21 +1,31 @@
-/* Theme tokens. Dark mode swaps these; every rule below reads them. */
+/* Theme tokens. The OS preference picks a side; every rule below reads them. */
 :root {
-  --fg: #293c4b;
-  --bg: #ffffff;
+  color-scheme: light dark;
+
+  /* Palette */
+  --ink: #293c4b;
+  --paper: #ffffff;
+  --ash: #cfcfcf;
+  --charcoal: rgb(29, 29, 29);
+
+  /* Roles. Light value first, dark second. */
+  --fg: light-dark(var(--ink), var(--ash));
+  --bg: light-dark(var(--paper), var(--charcoal));
+  --btn-bg: light-dark(var(--ink), var(--charcoal));
+  --btn-border: light-dark(transparent, var(--ash));
+  --icon-notion: light-dark(#000000, #ffffff);
   --accent-hover: #576ce0;
   --accent-active: #0076d1;
   --emphasis-hover: #ff7518;
-  --btn-bg: var(--fg);
-  --btn-border: transparent;
-  --icon-notion: #000000;
+}
+
+/* The button's override, in both directions. Cleared on reload. */
+:root[data-theme='light'] {
+  color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-  --fg: #cfcfcf;
-  --bg: rgb(29, 29, 29);
-  --btn-bg: var(--bg);
-  --btn-border: var(--fg);
-  --icon-notion: #ffffff;
+  color-scheme: dark;
 }
 
 body {

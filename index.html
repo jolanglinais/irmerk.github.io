@@ -5,7 +5,8 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com; style-src 'self' 'unsafe-inline' https://kit.fontawesome.com; font-src 'self' https://fonts.gstatic.com https://kit.fontawesome.com https://ka-f.fontawesome.com; connect-src https://ka-f.fontawesome.com;">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1d1d1d" />
         <meta name="Jolene Langlinais" content="Personal Website" />
         <meta name="description" content="Jolene Langlinais's personal website with links to resources including blogs, talks, contact, and personal wiki." />
         <link rel="shortcut icon" href="favicon.ico" />
@@ -24,7 +25,10 @@
                     </div>
                     <div>
                         <a href="https://jolenelanglinais.com">
-                            <img id="sig" src="assets/signatureDark.webp" alt="Jolene Langlinais Signature" />
+                            <picture>
+                                <source id="sigDark" media="(prefers-color-scheme: dark)" srcset="assets/signatureLight.webp" />
+                                <img id="sig" src="assets/signatureDark.webp" alt="Jolene Langlinais Signature" />
+                            </picture>
                         </a>
                     </div>
                     <div>
@@ -59,7 +63,7 @@
                         <span class="sr-only">Zest Regards</span>
                     </a>
                 </div>
-                <button id="lightOrDarkButton">🌙</button>
+                <button id="lightOrDarkButton"></button>
             </div>
     </body>
 </html>
