@@ -1,92 +1,92 @@
+/* Theme tokens. Dark mode swaps these; every rule below reads them. */
+:root {
+  --fg: #293c4b;
+  --bg: #ffffff;
+  --accent-hover: #576ce0;
+  --accent-active: #0076d1;
+  --emphasis-hover: #ff7518;
+  --btn-bg: var(--fg);
+  --btn-border: transparent;
+  --icon-notion: #000000;
+}
+
+:root[data-theme='dark'] {
+  --fg: #cfcfcf;
+  --bg: rgb(29, 29, 29);
+  --btn-bg: var(--bg);
+  --btn-border: var(--fg);
+  --icon-notion: #ffffff;
+}
+
 body {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-display: swap;
   margin: 0;
   text-align: center;
-  color: #293c4b;
-  transition: background 0.25s;
+  color: var(--fg);
+  background-color: var(--bg);
+  transition: background-color 0.25s, color 0.25s;
 }
 
 /* General text */
 p {
   font-size: 1.2rem;
   font-family: 'Cairo', sans-serif;
-  font-display: swap;
-  max-width: 700px;
-  margin: 10px auto;
+  max-width: 43.75rem;
+  margin: 0.625rem auto;
 }
 
-/* link hover transition activity */
+/* Links and social icons share color and the fade-on-hover */
 a,
 i {
-  color: #293c4b;
+  color: var(--fg);
   font-weight: 400;
   text-decoration: none;
-
-  /*for fade effect on hover*/
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  transition: color 0.5s;
 }
 
-/* Specify links */
-a:link {
+a {
   font-size: 1.2rem;
-  color: #293c4b;
 }
 
-/* Specify visited links */
-a:visited {
-  color: #293c4b;
-}
-
-/* Specify hovered links */
+/* Faster in than out */
 a:hover {
-  color: #576ce0;
-  transition: 0.15s;
+  color: var(--accent-hover);
+  transition: color 0.15s;
 }
 
-/* Specify active links */
 a:active {
-  color: #0076d1;
+  color: var(--accent-active);
 }
 
-/* Enlarge social icons */
+/* Spacing around social icons; em so it tracks the icon's own size */
 i {
-  padding: 5px;
+  padding: 0.25em;
 }
 
 #page {
-  margin-top: 50px;
+  margin-top: 3.125rem;
   display: grid;
 }
 
 /* Headshot image */
 #headshot {
-  height: 200px;
+  height: 12.5rem;
   vertical-align: middle;
 }
 
 /* Signature */
 #sig {
-  width: 400px;
+  width: 25rem;
   max-width: 70%;
 }
 
 .emphasis {
-  /*for fade effect on hover*/
-  -o-transition:color 0.5s;
-  -ms-transition:color 0.5s;
-  -moz-transition:color 0.5s;
-  -webkit-transition:color 0.5s;
-  transition:color 0.5s;
+  transition: color 0.5s;
 }
 
 .emphasis:hover {
-  color: #FF7518;
-  transition: 0.15s;
+  color: var(--emphasis-hover);
+  transition: color 0.15s;
 }
 
 /* Social link icon wrapper */
@@ -94,13 +94,13 @@ i {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 280px; /* adjust to fit 5 items per row */
+  max-width: 17.5rem; /* adjust to fit 5 items per row */
   margin: 0.5em auto;
 }
 
 /* All child social links */
 #socialLink > * {
-  margin: 8px;
+  margin: 0.5rem;
 }
 
 /* Specify social icon hover color, in link order */
@@ -114,7 +114,7 @@ i {
   color: #78e371;
 }
 .fa-notion:hover {
-  color: #000000;
+  color: var(--icon-notion);
 }
 .fa-book:hover {
   color: #ffb559;
@@ -122,21 +122,23 @@ i {
 
 #lightOrDarkButton {
   place-self: center;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0px;
-  background-color: #293c4b;
+  border: 1px solid var(--btn-border);
+  background-color: var(--btn-bg);
   cursor: pointer;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-#lightOrDarkButton:focus {
-  outline: none;
-  border-color: #576ce0;
-  box-shadow: 0 0 10px #576ce0;
+/* Keyboard focus only. A real outline survives forced-colors mode; the glow doesn't. */
+#lightOrDarkButton:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 2px;
+  box-shadow: 0 0 10px var(--accent-hover);
 }
 
 .sr-only {
